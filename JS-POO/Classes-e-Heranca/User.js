@@ -12,19 +12,50 @@ export default class User {
         this.#ativo = ativo
     }
 
-    #montaObjUser() {
-        return ({
-            nome: this.#nome,
-            email: this.#email,
-            nascimento: this.#nascimento,
-            role: this.#role,
-            ativo: this.#ativo
-        })
+    exibirInfos(){
+        return `${this.nome}, ${this.email}, ${this.nascimento}, ${this.role}, ${this.ativo}` 
     }
 
-    exibirInfos(){
-        const objUser = this.#montaObjUser()
-        return `${objUser.nome}, ${objUser.email}, ${objUser.nascimento}, ${objUser.role}, ${objUser.ativo}` 
+    // Getters and Setters
+
+    get nome() {
+        return this.#nome
+    }
+
+    get email() {
+        return this.#email
+    }
+
+    get nascimento() {
+        return this.#nascimento
+    }
+
+    get role() {
+        return this.#role
+    }
+ 
+    get ativo() {
+        return this.#ativo
+    }
+
+    set nome(novoNome) {
+        this.#nome = novoNome
+    }
+
+    set email(novoEmail){
+        this.#email = novoEmail
+    }
+
+    set nascimento(novoNascimento){
+        this.#nascimento = novoNascimento
+    }
+
+    set role(novaRole){
+        this.#role = novaRole
+    }
+
+    set ativo(novoAtivo){
+        this.#ativo = novoAtivo
     }
 }
 
