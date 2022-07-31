@@ -39,7 +39,11 @@ export default class User {
     }
 
     set nome(novoNome) {
-        this.#nome = novoNome
+        if(novoNome != ""){
+            this.#nome = novoNome
+        }else{
+            throw new Error('Não pode ser vazio')
+        }
     }
 
     set email(novoEmail){
